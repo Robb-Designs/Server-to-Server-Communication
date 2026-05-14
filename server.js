@@ -51,10 +51,10 @@ app.get('/api/fun-fact', async (req, res) => {
             fact: factsResponse.data.text
         });
     } catch (error) {
-        if (error.factsResponse) {
+        if (error.response) {
             // The request was made and the server responded with a status code
-            console.error('API Error:', error.factsResponse.status, error.factsResponse.data);
-            res.status(error.factsResponse.status).json({ message: 'Error fetching data from external API.' });
+            console.error('API Error:', error.response.status, error.response.data);
+            res.status(error.response.status).json({ message: 'Error fetching data from external API.' });
         } else {
             // Something happened in setting up the request that triggered an Error
             console.error('Network Error:', error.message);
