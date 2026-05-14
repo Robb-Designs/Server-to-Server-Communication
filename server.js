@@ -8,6 +8,7 @@ const PORT = process.env.PORT;
 
 
 //MIDDLEWARE--------------------------------------------------------------------------------------
+app.use(express.static(path.join(__dirname, 'public')));
 
 
 
@@ -16,6 +17,17 @@ const PORT = process.env.PORT;
 app.get('/', (req, res) => {
     res.send('Testing');
 })
+
+
+//homepage
+app.get('/daily-grind', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'))
+});
+
+//contact page
+app.get('/contact', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'contact.html'))
+});
 
 
 
