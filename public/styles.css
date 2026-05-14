@@ -1,0 +1,13 @@
+:root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #dac5af;
+  color: #3e2723;
+  text-align: center;
+  padding: 50px;
+  margin: 0;
+}

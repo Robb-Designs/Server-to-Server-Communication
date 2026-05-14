@@ -1,6 +1,7 @@
 //DEPENDENCIES--------------------------------------------------------------------------------------
 const express = require('express');
 const app = express();
+const path = require('path')
 
 require('dotenv').config();
 const PORT = process.env.PORT;
@@ -8,7 +9,7 @@ const PORT = process.env.PORT;
 
 
 //MIDDLEWARE--------------------------------------------------------------------------------------
-app.use(express.static(path.join(__dirname, 'public')));
+ app.use(express.static(path.join(__dirname, 'public')));
 
 
 
