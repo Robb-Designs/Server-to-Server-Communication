@@ -1,7 +1,8 @@
 //DEPENDENCIES--------------------------------------------------------------------------------------
 const express = require('express');
 const app = express();
-const path = require('path')
+const axios = require('axios');
+const path = require('path');
 
 require('dotenv').config();
 const PORT = process.env.PORT || 2000;
@@ -35,4 +36,4 @@ app.get('/contact', (req, res) => {
 //PORT--------------------------------------------------------------------------------------
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`)
-})
+});
